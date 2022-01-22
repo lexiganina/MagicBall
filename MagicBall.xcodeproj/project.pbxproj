@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		019DD81F907CF44A836B6705 /* Pods_MagicBall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D713A8EEAB9C395FABEAFC71 /* Pods_MagicBall.framework */; };
+		84A8F6EF279CA19300BA6A7B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6EE279CA19300BA6A7B /* NetworkManager.swift */; };
+		84A8F6F1279CA1C900BA6A7B /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6F0279CA1C900BA6A7B /* NetworkMonitor.swift */; };
+		84A8F6F3279CA24700BA6A7B /* AnswersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6F2279CA24700BA6A7B /* AnswersData.swift */; };
+		84A8F6F5279CA27700BA6A7B /* Extantions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6F4279CA27700BA6A7B /* Extantions.swift */; };
+		84A8F6F7279CA29D00BA6A7B /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6F6279CA29D00BA6A7B /* URLBuilder.swift */; };
 		84D5ADDD279C318200485706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADDC279C318200485706 /* AppDelegate.swift */; };
 		84D5ADDF279C318200485706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADDE279C318200485706 /* SceneDelegate.swift */; };
-		84D5ADE1279C318200485706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADE0279C318200485706 /* ViewController.swift */; };
+		84D5ADE1279C318200485706 /* BallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADE0279C318200485706 /* BallViewController.swift */; };
 		84D5ADE4279C318200485706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D5ADE2279C318200485706 /* Main.storyboard */; };
 		84D5ADE6279C318300485706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D5ADE5279C318300485706 /* Assets.xcassets */; };
 		84D5ADE9279C318300485706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D5ADE7279C318300485706 /* LaunchScreen.storyboard */; };
@@ -18,10 +23,15 @@
 
 /* Begin PBXFileReference section */
 		491C495B44676FDC9FD98218 /* Pods-MagicBall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicBall.debug.xcconfig"; path = "Target Support Files/Pods-MagicBall/Pods-MagicBall.debug.xcconfig"; sourceTree = "<group>"; };
+		84A8F6EE279CA19300BA6A7B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		84A8F6F0279CA1C900BA6A7B /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		84A8F6F2279CA24700BA6A7B /* AnswersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersData.swift; sourceTree = "<group>"; };
+		84A8F6F4279CA27700BA6A7B /* Extantions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extantions.swift; sourceTree = "<group>"; };
+		84A8F6F6279CA29D00BA6A7B /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		84D5ADD9279C318200485706 /* MagicBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D5ADDC279C318200485706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D5ADDE279C318200485706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84D5ADE0279C318200485706 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84D5ADE0279C318200485706 /* BallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallViewController.swift; sourceTree = "<group>"; };
 		84D5ADE3279C318200485706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84D5ADE5279C318300485706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D5ADE8279C318300485706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,8 +58,42 @@
 				491C495B44676FDC9FD98218 /* Pods-MagicBall.debug.xcconfig */,
 				FE86214F42E37C86E1361589 /* Pods-MagicBall.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		84A8F6F8279CA33500BA6A7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84A8F6F2279CA24700BA6A7B /* AnswersData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84A8F6F9279CA36A00BA6A7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84D5ADE2279C318200485706 /* Main.storyboard */,
+				84D5ADE7279C318300485706 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84A8F6FA279CA37B00BA6A7B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84D5ADE0279C318200485706 /* BallViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84A8F6FB279CA3AF00BA6A7B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				84A8F6F6279CA29D00BA6A7B /* URLBuilder.swift */,
+				84A8F6F0279CA1C900BA6A7B /* NetworkMonitor.swift */,
+				84A8F6EE279CA19300BA6A7B /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		84D5ADD0279C318200485706 = {
@@ -73,13 +117,15 @@
 		84D5ADDB279C318200485706 /* MagicBall */ = {
 			isa = PBXGroup;
 			children = (
+				84D5ADEA279C318300485706 /* Info.plist */,
+				84D5ADE5279C318300485706 /* Assets.xcassets */,
 				84D5ADDC279C318200485706 /* AppDelegate.swift */,
 				84D5ADDE279C318200485706 /* SceneDelegate.swift */,
-				84D5ADE0279C318200485706 /* ViewController.swift */,
-				84D5ADE2279C318200485706 /* Main.storyboard */,
-				84D5ADE5279C318300485706 /* Assets.xcassets */,
-				84D5ADE7279C318300485706 /* LaunchScreen.storyboard */,
-				84D5ADEA279C318300485706 /* Info.plist */,
+				84A8F6F4279CA27700BA6A7B /* Extantions.swift */,
+				84A8F6FB279CA3AF00BA6A7B /* Network */,
+				84A8F6F8279CA33500BA6A7B /* Model */,
+				84A8F6FA279CA37B00BA6A7B /* Controllers */,
+				84A8F6F9279CA36A00BA6A7B /* View */,
 			);
 			path = MagicBall;
 			sourceTree = "<group>";
@@ -207,9 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D5ADE1279C318200485706 /* ViewController.swift in Sources */,
+				84A8F6EF279CA19300BA6A7B /* NetworkManager.swift in Sources */,
+				84D5ADE1279C318200485706 /* BallViewController.swift in Sources */,
+				84A8F6F1279CA1C900BA6A7B /* NetworkMonitor.swift in Sources */,
 				84D5ADDD279C318200485706 /* AppDelegate.swift in Sources */,
+				84A8F6F5279CA27700BA6A7B /* Extantions.swift in Sources */,
+				84A8F6F7279CA29D00BA6A7B /* URLBuilder.swift in Sources */,
 				84D5ADDF279C318200485706 /* SceneDelegate.swift in Sources */,
+				84A8F6F3279CA24700BA6A7B /* AnswersData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
