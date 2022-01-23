@@ -96,6 +96,7 @@ class BallViewController: UIViewController {
                 print("Random answer")
                 return randomAnswer
             } else {
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                 self.present(Alerts.noAnswersAvailable, animated: true, completion: nil)
             }
         }
