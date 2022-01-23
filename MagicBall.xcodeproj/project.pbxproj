@@ -14,6 +14,8 @@
 		84A8F6F5279CA27700BA6A7B /* Extantions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6F4279CA27700BA6A7B /* Extantions.swift */; };
 		84A8F6F7279CA29D00BA6A7B /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6F6279CA29D00BA6A7B /* URLBuilder.swift */; };
 		84A8F6FD279CA79A00BA6A7B /* RandomAnswersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6FC279CA79A00BA6A7B /* RandomAnswersData.swift */; };
+		84A8F6FF279CD60300BA6A7B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6FE279CD60300BA6A7B /* SettingsTableViewController.swift */; };
+		84A8F701279CD64200BA6A7B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F700279CD64200BA6A7B /* SettingsTableViewCell.swift */; };
 		84D5ADDD279C318200485706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADDC279C318200485706 /* AppDelegate.swift */; };
 		84D5ADDF279C318200485706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADDE279C318200485706 /* SceneDelegate.swift */; };
 		84D5ADE1279C318200485706 /* BallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADE0279C318200485706 /* BallViewController.swift */; };
@@ -30,6 +32,8 @@
 		84A8F6F4279CA27700BA6A7B /* Extantions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extantions.swift; sourceTree = "<group>"; };
 		84A8F6F6279CA29D00BA6A7B /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		84A8F6FC279CA79A00BA6A7B /* RandomAnswersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAnswersData.swift; sourceTree = "<group>"; };
+		84A8F6FE279CD60300BA6A7B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		84A8F700279CD64200BA6A7B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		84D5ADD9279C318200485706 /* MagicBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D5ADDC279C318200485706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D5ADDE279C318200485706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				84D5ADE0279C318200485706 /* BallViewController.swift */,
+				84A8F6FE279CD60300BA6A7B /* SettingsTableViewController.swift */,
+				84A8F700279CD64200BA6A7B /* SettingsTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 				84A8F6FD279CA79A00BA6A7B /* RandomAnswersData.swift in Sources */,
 				84D5ADDD279C318200485706 /* AppDelegate.swift in Sources */,
 				84A8F6F5279CA27700BA6A7B /* Extantions.swift in Sources */,
+				84A8F701279CD64200BA6A7B /* SettingsTableViewCell.swift in Sources */,
+				84A8F6FF279CD60300BA6A7B /* SettingsTableViewController.swift in Sources */,
 				84A8F6F7279CA29D00BA6A7B /* URLBuilder.swift in Sources */,
 				84D5ADDF279C318200485706 /* SceneDelegate.swift in Sources */,
 				84A8F6F3279CA24700BA6A7B /* AnswersData.swift in Sources */,
@@ -428,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AA.MagicBall;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MagicBall.AA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -458,7 +466,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AA.MagicBall;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MagicBall.AA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
