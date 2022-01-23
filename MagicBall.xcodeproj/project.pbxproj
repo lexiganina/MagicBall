@@ -16,6 +16,7 @@
 		84A8F6FD279CA79A00BA6A7B /* RandomAnswersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6FC279CA79A00BA6A7B /* RandomAnswersData.swift */; };
 		84A8F6FF279CD60300BA6A7B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F6FE279CD60300BA6A7B /* SettingsTableViewController.swift */; };
 		84A8F701279CD64200BA6A7B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8F700279CD64200BA6A7B /* SettingsTableViewCell.swift */; };
+		84C0BCFB279D88DB00D52FAA /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0BCFA279D88DB00D52FAA /* Alerts.swift */; };
 		84D5ADDD279C318200485706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADDC279C318200485706 /* AppDelegate.swift */; };
 		84D5ADDF279C318200485706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADDE279C318200485706 /* SceneDelegate.swift */; };
 		84D5ADE1279C318200485706 /* BallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5ADE0279C318200485706 /* BallViewController.swift */; };
@@ -34,6 +35,7 @@
 		84A8F6FC279CA79A00BA6A7B /* RandomAnswersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAnswersData.swift; sourceTree = "<group>"; };
 		84A8F6FE279CD60300BA6A7B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		84A8F700279CD64200BA6A7B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		84C0BCFA279D88DB00D52FAA /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alerts.swift; path = /Users/alexhanina/Projects/MagicBall/MagicBall/Alerts.swift; sourceTree = "<absolute>"; };
 		84D5ADD9279C318200485706 /* MagicBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D5ADDC279C318200485706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D5ADDE279C318200485706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		84C0BCFC279D90AA00D52FAA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84C0BCFA279D88DB00D52FAA /* Alerts.swift */,
+				84A8F6F4279CA27700BA6A7B /* Extantions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		84D5ADD0279C318200485706 = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +141,7 @@
 				84D5ADE5279C318300485706 /* Assets.xcassets */,
 				84D5ADDC279C318200485706 /* AppDelegate.swift */,
 				84D5ADDE279C318200485706 /* SceneDelegate.swift */,
-				84A8F6F4279CA27700BA6A7B /* Extantions.swift */,
+				84C0BCFC279D90AA00D52FAA /* Helpers */,
 				84A8F6FB279CA3AF00BA6A7B /* Network */,
 				84A8F6F8279CA33500BA6A7B /* Model */,
 				84A8F6FA279CA37B00BA6A7B /* Controllers */,
@@ -272,6 +283,7 @@
 				84A8F6FF279CD60300BA6A7B /* SettingsTableViewController.swift in Sources */,
 				84A8F6F7279CA29D00BA6A7B /* URLBuilder.swift in Sources */,
 				84D5ADDF279C318200485706 /* SceneDelegate.swift in Sources */,
+				84C0BCFB279D88DB00D52FAA /* Alerts.swift in Sources */,
 				84A8F6F3279CA24700BA6A7B /* AnswersData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

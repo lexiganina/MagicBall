@@ -10,7 +10,7 @@ import AudioToolbox
 import Reachability
 
 class BallViewController: UIViewController {
-    
+
     @IBOutlet weak var answerLable: UILabel!
     @IBOutlet weak var ballImageView: UIImageView!
     @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
@@ -41,7 +41,8 @@ class BallViewController: UIViewController {
         }
     }
     
-    //    MARK: - Data request
+    // MARK: - Data request
+    
     func updateModelWithData() {
         if internetStatus {
             NetworkManager.shared.downloadAnswersData { answersData in
@@ -49,7 +50,6 @@ class BallViewController: UIViewController {
                     self.answersDataResult = answersData
                     self.answerLable.text = self.getAnswerFromInternet()
                 }
-                
             } onError: { error in
                 print(error)
                 DispatchQueue.main.async {
@@ -61,7 +61,8 @@ class BallViewController: UIViewController {
         }
     }
     
-    //    MARK: - Gesture
+    // MARK: - Gesture
+    
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             updateModelWithData()
@@ -74,10 +75,11 @@ class BallViewController: UIViewController {
         }
     }
     
-    //    MARK: - Ball Logic
+    // MARK: - Ball Logic
+    
     func getAnswerFromInternet() -> String {
         if let answer = answersDataResult?.magic.answer {
-            print("internet answer")
+            print("Internet answer")
             return answer
         } else {
             print("Data decoding failed")
@@ -91,15 +93,13 @@ class BallViewController: UIViewController {
         if let array = arrayFromUserDefaults {
             if array.count != 0 {
                 let randomAnswer = array[Int.random(in: 0 ..< array.count)]
-                print("random answer")
+                print("Random answer")
                 return randomAnswer
             } else {
-                let alert = UIAlertController(title: "No answers are available", message: "Go to Settings and add some. Or try to connect to the internet.", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                self.present(Alerts.noAnswersAvailable, animated: true, completion: nil)
             }
-            
         }
+        
         return "Shake your phone"
     }
 }
@@ -110,10 +110,7 @@ extension BallViewController: NetworlMonitorDelegate {
     }
     
     func didDisconected() {
-        let alert = UIAlertController(title: "No internet connection", message: "You will receive one of the preset answers. You can manage them in Settings.", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        
+        self.present(Alerts.noInternet, animated: true, completion: nil)
         internetStatus = false
     }
     

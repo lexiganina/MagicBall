@@ -8,19 +8,21 @@
 import Foundation
 
 final class NetworkManager {
+    
     static let shared = NetworkManager()
     
     private init() {}
     
     func downloadAnswersData(onSuccess: @escaping(AnswersData) -> Void, onError: @escaping(String) -> Void)  {
-        
         guard let question = "Is it my best day?".encodeURIComponent() else {
             print("Error")
             return
         }
+        
         let session = URLSession.shared
         let decoder = JSONDecoder()
         let urlBuilder = URLBuilder()
+        
         urlBuilder.base()
         urlBuilder.magic()
         urlBuilder.JSON()
@@ -53,10 +55,7 @@ final class NetworkManager {
                 print(error)
                 onError(error.localizedDescription)
             }
-            
         }.resume()
-        
     }
-    
 }
 

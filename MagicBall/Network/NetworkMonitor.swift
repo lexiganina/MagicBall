@@ -23,17 +23,11 @@ final class NetworkMonitor {
     let reachability = try! Reachability()
     
     func startNWListner() {
-        
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         
         reachability.whenReachable = { reachability in
-            if reachability.connection == .wifi {
-                print("Reachable via WiFi")
-                self.delegate?.didConnected()
-            } else {
-                print("Reachable via Cellular")
-                self.delegate?.didConnected()
-            }
+            print("Reachable")
+            self.delegate?.didConnected()
         }
         reachability.whenUnreachable = { _ in
             print("Not reachable")
@@ -48,7 +42,6 @@ final class NetworkMonitor {
     }
     
     @objc func reachabilityChanged(note: Notification) {
-        
         let reachability = note.object as! Reachability
         
         switch reachability.connection {
@@ -62,6 +55,4 @@ final class NetworkMonitor {
             print("Network none")
         }
     }
-    
-    
 }

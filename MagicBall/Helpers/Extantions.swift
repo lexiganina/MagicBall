@@ -9,17 +9,14 @@ import Foundation
 import UIKit
 
 extension String {
-    
     func encodeURIComponent() -> String? {
         let characterSet = NSMutableCharacterSet.urlQueryAllowed
         
         return self.addingPercentEncoding(withAllowedCharacters: characterSet)
     }
-    
 }
 
 extension UIViewController {
-    
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
