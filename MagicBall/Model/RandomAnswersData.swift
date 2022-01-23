@@ -9,7 +9,10 @@ import Foundation
 
 struct RandomAnswers {
     
-    static var answersArray = ["It is certain", "It is decidedly so",
+    static let randomAnswersArray = "Random answers array"
+    
+    static var answersArray = ["It is certain",
+                               "It is decidedly so",
                                "Without a doubt",
                                "Yes — definitely",
                                "You may rely on it",

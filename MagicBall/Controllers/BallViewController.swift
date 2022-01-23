@@ -62,11 +62,22 @@ class BallViewController: UIViewController {
     }
     
     func getRandomeAnswer() -> String {
-        let randomAnswer = RandomAnswers.answersArray[Int.random(in: 0 ..< RandomAnswers.answersArray.count)]
-        print("random answer")
-        return randomAnswer
+        let arrayFromUserDefaults = (UserDefaults.standard.array(forKey: RandomAnswers.randomAnswersArray)) as? [String]
+        
+        if let array = arrayFromUserDefaults {
+            if array.count != 0 {
+                let randomAnswer = array[Int.random(in: 0 ..< array.count)]
+                print("random answer")
+                return randomAnswer
+            } else {
+                let alert = UIAlertController(title: "No answers are available", message: "Go to Settings and add some. Or try to connect to the internet.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        }
+        return "Shake your phone"
     }
-    
 }
 
 extension BallViewController: NetworlMonitorDelegate {

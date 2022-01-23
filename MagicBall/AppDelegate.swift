@@ -10,12 +10,26 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    private let firstLaunch = "First launch"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         NetworkMonitor.shared.startNWListner()
+        
+        if UserDefaults.standard.value(forKey: firstLaunch) == nil {
+            UserDefaults.standard.set(true, forKey: firstLaunch)
+            setupDefaultAnswersToUserDefaults()
+        }
+        
         return true
+    }
+    
+    func setupDefaultAnswersToUserDefaults() {
+        if let firstLaunch = UserDefaults.standard.value(forKey: firstLaunch) as? Bool,
+           firstLaunch {
+            UserDefaults.standard.set(RandomAnswers.answersArray, forKey: RandomAnswers.randomAnswersArray)
+        }
+        
     }
 
     // MARK: UISceneSession Lifecycle
