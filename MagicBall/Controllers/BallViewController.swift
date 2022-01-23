@@ -12,14 +12,33 @@ import Reachability
 class BallViewController: UIViewController {
     
     @IBOutlet weak var answerLable: UILabel!
+    @IBOutlet weak var ballImageView: UIImageView!
+    @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
     
     private var answersDataResult: AnswersData?
     private var internetStatus = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ballImageView.dropShadow()
         NetworkMonitor.shared.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            buttonTopConstraint.constant = 15
+        } else {
+            buttonTopConstraint.constant = 44
+        }
     }
     
     //    MARK: - Data request
@@ -45,8 +64,13 @@ class BallViewController: UIViewController {
     //    MARK: - Gesture
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             updateModelWithData()
+        }
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
     }
     
@@ -86,9 +110,11 @@ extension BallViewController: NetworlMonitorDelegate {
     }
     
     func didDisconected() {
+        let alert = UIAlertController(title: "No internet connection", message: "You will receive one of the preset answers. You can manage them in Settings.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
         internetStatus = false
     }
     
-    
 }
-
